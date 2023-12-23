@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+
+$primary: #DFEBEA;
+$secondary: #6fccc4;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Jaldi, monospace;
+}
+
+section {
+    padding: 20px 200px;
+}
+
+@mixin btn-styling($color:#6fccc4) {
+    padding: 15px 65px;
+    background-color: $color;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+header {
+    padding: 12px 200px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary;
+    .logo {
+        display: flex;
+        align-items: center;
+        p {
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+    }
+    .link {
+        display: flex;
+        align-items: center;
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+    }
+}
+
+main {
+    .description {
+        p {
+            font-size: 1.4rem;
+        }
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+        .search-container {
+            display: flex;
+            align-items: center;
+            input {
+                padding: 15px 15px;
+                min-width: 350px;
+                outline: none;
+                font-size: 1.4rem;
+                border: 1px solid black;
+            }
+            .search-button {
+                @include btn-styling($secondary);
+            }
+        }
+        .devices {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            .pc-button{
+                @include btn-styling(white);
+            }
+            .mobile-button {
+                @include btn-styling($secondary);
+            }
+        }
+    }
+    .image-render {
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .image {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .right-container {
+                    margin-bottom: 15px;
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                    .btn-container {
+                        .info-button {
+                            @include btn-styling(white);
+                            a {
+                                text-decoration: none;
+                                color: crimson;
+                                font-size: 20px;
+                            }
+                        }
+                        .download-button {
+                            @include btn-styling($primary);
+                            a {
+                                color: black;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Jaldi, monospace;
+}
+
+section {
+  padding: 20px 200px;
+}
+
+header {
+  padding: 12px 200px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #DFEBEA;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo p {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+header .link {
+  display: flex;
+  align-items: center;
+}
+header .link a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+main .description p {
+  font-size: 1.4rem;
+}
+main .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+main .search .search-container {
+  display: flex;
+  align-items: center;
+}
+main .search .search-container input {
+  padding: 15px 15px;
+  min-width: 350px;
+  outline: none;
+  font-size: 1.4rem;
+  border: 1px solid black;
+}
+main .search .search-container .search-button {
+  padding: 15px 65px;
+  background-color: #6fccc4;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border: 1px solid black;
+}
+main .search .devices {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+main .search .devices .pc-button {
+  padding: 15px 65px;
+  background-color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border: 1px solid black;
+}
+main .search .devices .mobile-button {
+  padding: 15px 65px;
+  background-color: #6fccc4;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border: 1px solid black;
+}
+main .image-render #container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .image-render #container .image {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .image-render #container .image .right-container {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+main .image-render #container .image .right-container .btn-container .info-button {
+  padding: 15px 65px;
+  background-color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border: 1px solid black;
+}
+main .image-render #container .image .right-container .btn-container .info-button a {
+  text-decoration: none;
+  color: crimson;
+  font-size: 20px;
+}
+main .image-render #container .image .right-container .btn-container .download-button {
+  padding: 15px 65px;
+  background-color: #DFEBEA;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border: 1px solid black;
+}
+main .image-render #container .image .right-container .btn-container .download-button a {
+  color: black;
+  text-decoration: none;
+}/*# sourceMappingURL=styles.css.map */
