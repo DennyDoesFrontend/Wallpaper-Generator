@@ -15,9 +15,8 @@ section {
     margin: 15px;
 }
 
-@mixin btn-styling($color:#6fccc4) {
+@mixin btn-styling() {
     padding: 15px 65px;
-    background-color: $color;
     font-size: 1.4rem;
     cursor: pointer;
     border: 1px solid black;
@@ -73,18 +72,8 @@ main {
                 border: 1px solid black;
             }
             .search-button {
-                @include btn-styling($secondary);
-            }
-        }
-        .devices {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            .pc-button{
-                @include btn-styling(white);
-            }
-            .mobile-button {
-                @include btn-styling($secondary);
+                @include btn-styling();
+                background-color: $primary;
             }
         }
     }
@@ -106,7 +95,7 @@ main {
                     gap: 30px;
                     .btn-container {
                         .info-button {
-                            @include btn-styling(white);
+                            @include btn-styling();
                             margin-bottom: 15px;
                             a {
                                 text-decoration: none;
@@ -115,7 +104,7 @@ main {
                             }
                         }
                         .download-button {
-                            @include btn-styling($primary);
+                            @include btn-styling();
                             padding: 15px 55px;
                             a {
                                 color: black;

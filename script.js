@@ -1,10 +1,9 @@
 const container = document.getElementById('container');
 const inputField = document.getElementById('input-field');
 const searchBtn = document.getElementById('search-button');
-const pcBtn = document.getElementById('pc-button');
-const mobileBtn = document.getElementById('mobile-button');
 const inputData = document.getElementById('input-field');
 let photos = [];
+let orientation = 'portrait';
 
 // log the data
 function displayPhotos () {
@@ -50,13 +49,11 @@ function displayPhotos () {
         imageContainer.appendChild(rightContainer);
         container.appendChild(imageContainer);
     })
-
 }
 
 // fetch data from Unsplash
 async function getImages() {
     const apiKey = 'ROnCWmhMKQ0LEaM7RmLU5bpyhWCujckAvBIwvrtIL8o';
-    const orientation = 'portrait';
     const apiUrl = `https://api.unsplash.com/search/photos?query=${inputField.value}&orientation=${orientation}&client_id=${apiKey}`;
     const response = await fetch(apiUrl);
     const data = await response.json();
