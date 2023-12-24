@@ -10,8 +10,9 @@ $secondary: #6fccc4;
     font-family: Jaldi, monospace;
 }
 
+
 section {
-    padding: 20px 200px;
+    margin: 15px;
 }
 
 @mixin btn-styling($color:#6fccc4) {
@@ -23,19 +24,20 @@ section {
 }
 
 header {
-    padding: 12px 200px;
     display: flex;
     justify-content: space-between;
     background-color: $primary;
     .logo {
         display: flex;
         align-items: center;
+        margin-left: 15px;
         p {
             font-weight: 700;
             font-size: 1.4rem;
         }
     }
     .link {
+        margin-right: 15px;
         display: flex;
         align-items: center;
         a {
@@ -62,6 +64,7 @@ main {
         .search-container {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             input {
                 padding: 15px 15px;
                 min-width: 350px;
@@ -76,7 +79,7 @@ main {
         .devices {
             display: flex;
             align-items: center;
-            gap: 50px;
+            flex-wrap: wrap;
             .pc-button{
                 @include btn-styling(white);
             }
@@ -91,11 +94,10 @@ main {
             // display: flex;
             // flex-direction: column;
             // align-items: center;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
             .image {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 gap: 15px;
                 .right-container {
                     margin-bottom: 15px;
@@ -105,6 +107,7 @@ main {
                     .btn-container {
                         .info-button {
                             @include btn-styling(white);
+                            margin-bottom: 15px;
                             a {
                                 text-decoration: none;
                                 color: crimson;
@@ -122,6 +125,22 @@ main {
                     }
                 }
             }
+        }
+    }
+}
+
+// responsiveness
+@media screen and (min-width: 850px) {
+    section, header {
+        padding: 20px 200px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .left-container {
+        width: 100%;
+        img {
+            width: 100%;
         }
     }
 }

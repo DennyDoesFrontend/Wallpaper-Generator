@@ -7,11 +7,10 @@
 }
 
 section {
-  padding: 20px 200px;
+  margin: 15px;
 }
 
 header {
-  padding: 12px 200px;
   display: flex;
   justify-content: space-between;
   background-color: #DFEBEA;
@@ -19,12 +18,14 @@ header {
 header .logo {
   display: flex;
   align-items: center;
+  margin-left: 15px;
 }
 header .logo p {
   font-weight: 700;
   font-size: 1.4rem;
 }
 header .link {
+  margin-right: 15px;
   display: flex;
   align-items: center;
 }
@@ -48,6 +49,7 @@ main .search {
 main .search .search-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 main .search .search-container input {
   padding: 15px 15px;
@@ -66,7 +68,7 @@ main .search .search-container .search-button {
 main .search .devices {
   display: flex;
   align-items: center;
-  gap: 50px;
+  flex-wrap: wrap;
 }
 main .search .devices .pc-button {
   padding: 15px 65px;
@@ -85,13 +87,10 @@ main .search .devices .mobile-button {
 main .image-render {
   width: 100%;
 }
-main .image-render #container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
 main .image-render #container .image {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 15px;
 }
 main .image-render #container .image .right-container {
@@ -106,6 +105,7 @@ main .image-render #container .image .right-container .btn-container .info-butto
   font-size: 1.4rem;
   cursor: pointer;
   border: 1px solid black;
+  margin-bottom: 15px;
 }
 main .image-render #container .image .right-container .btn-container .info-button a {
   text-decoration: none;
@@ -123,4 +123,18 @@ main .image-render #container .image .right-container .btn-container .download-b
 main .image-render #container .image .right-container .btn-container .download-button a {
   color: black;
   text-decoration: none;
+}
+
+@media screen and (min-width: 850px) {
+  section, header {
+    padding: 20px 200px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .left-container {
+    width: 100%;
+  }
+  .left-container img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

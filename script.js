@@ -27,7 +27,7 @@ function displayPhotos () {
         const infoBtn = document.createElement('button');
         infoBtn.classList.add('info-button');
         const infoUrl = document.createElement('a');
-        infoUrl.textContent = 'More Info';
+        infoUrl.textContent = 'Details';
         infoUrl.href = item.links.html;
         infoUrl.target = '_blank';
         infoBtn.appendChild(infoUrl);
