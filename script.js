@@ -1,4 +1,5 @@
 const container = document.getElementById('container');
+const inputField = document.getElementById('input-field');
 const searchBtn = document.getElementById('search-button');
 const pcBtn = document.getElementById('pc-button');
 const mobileBtn = document.getElementById('mobile-button');
@@ -7,7 +8,7 @@ let photos = [];
 
 // log the data
 function displayPhotos () {
-    photos.forEach( item => {
+    photos.results.forEach( item => {
         const image = document.createElement('img');
         image.src = item.urls.small;
         // creating image container
@@ -52,14 +53,11 @@ function displayPhotos () {
 
 }
 
-// fetch the apiUrl
-const apiKey = 'ROnCWmhMKQ0LEaM7RmLU5bpyhWCujckAvBIwvrtIL8o';
-const count = 10;
-const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
-
-
 // fetch data from Unsplash
 async function getImages() {
+    const apiKey = 'ROnCWmhMKQ0LEaM7RmLU5bpyhWCujckAvBIwvrtIL8o';
+    const orientation = 'portrait';
+    const apiUrl = `https://api.unsplash.com/search/photos?query=${inputField.value}&orientation=${orientation}&client_id=${apiKey}`;
     const response = await fetch(apiUrl);
     const data = await response.json();
     console.log(data);
@@ -67,4 +65,7 @@ async function getImages() {
     displayPhotos();
 }
 
-getImages();
+searchBtn.addEventListener('click', ()=> {
+    container.textContent = '';
+    getImages();
+})

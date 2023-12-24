@@ -82,10 +82,12 @@ main .search .devices .mobile-button {
   cursor: pointer;
   border: 1px solid black;
 }
+main .image-render {
+  width: 100%;
+}
 main .image-render #container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 main .image-render #container .image {
   display: flex;
@@ -116,6 +118,7 @@ main .image-render #container .image .right-container .btn-container .download-b
   font-size: 1.4rem;
   cursor: pointer;
   border: 1px solid black;
+  padding: 15px 55px;
 }
 main .image-render #container .image .right-container .btn-container .download-button a {
   color: black;
